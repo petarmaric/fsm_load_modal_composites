@@ -1,0 +1,3 @@
+dynamic_pytables_where_condition~=1.0
+tables~=3.2
+PyYAML~=3.11

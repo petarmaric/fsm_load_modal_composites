@@ -1,0 +1,9 @@
+include AUTHORS
+include LICENSE
+include README
+
+include MANIFEST.in
+include requirements.txt
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
