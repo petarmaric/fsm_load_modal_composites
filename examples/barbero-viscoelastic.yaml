@@ -1,0 +1,63 @@
+search_space: # start, stop, step
+  a:   [500.00,  1000.00, 10.00] # [mm] strip length
+  t_b: [  5.00,     9.00,  0.25] # [mm] base strip thickness (t = t_b * t_s)
+  m:   [  1   ,    15   ,  1   ] # [no unit] mode (int)
+
+
+geometry:
+  beam_type_id: 1 # See https://bitbucket.org/petar/beam_integrals for full list
+
+  nodal_lines: # [mm] x, z coordinates
+    1:  [  0.000,    0.000]
+    2:  [ 38.000,    0.000]
+    3:  [ 76.000,    0.000]
+    4:  [114.000,    0.000]
+    5:  [ 76.000,   24.275]
+    6:  [152.000,    0.000]
+    7:  [ 76.000,   48.550]
+    8:  [ 76.000,   72.825]
+    9:  [ 76.000,   97.100]
+    10: [  0.000,  145.650]
+    11: [ 76.000,  121.375]
+    12: [ 38.000,  145.650]
+    13: [ 76.000,  145.650]
+    14: [114.000,  145.650]
+    15: [152.000,  145.650]
+
+  finite_strips: # node1, node2, material
+    - [ 1,   2,  flange]
+    - [ 2,   3,  flange]
+    - [ 3,   4,  flange]
+    - [ 3,   5,  web   ]
+    - [ 4,   6,  flange]
+    - [ 5,   7,  web   ]
+    - [ 7,   8,  web   ]
+    - [ 8,   9,  web   ]
+    - [ 9,  11,  web   ]
+    - [10,  12,  flange]
+    - [11,  13,  web   ]
+    - [12,  13,  flange]
+    - [13,  14,  flange]
+    - [14,  15,  flange]
+
+
+materials:
+  flange:
+    t_s:        1.00 # [no unit] strip thickness scale factor (t = t_b * t_s)
+    ro:     10000.00 # [kg/m**3] mass density, convert to [kg/mm**3] before calc
+    c:          1.00 # [no unit] stress ratio
+    E_x:    20928.75 # [N/mm**2] elastic modulus
+    E_y:     8032.99 # [N/mm**2] elastic modulus
+    mu_x:       0.38 # [no unit] Poisson's ratio
+    mu_y:       0.15 # [no unit] Poisson's ratio
+    G_xy: 1805287.39 # [N/mm**2] shear modulus
+
+  web:
+    t_s:        1.00 # [no unit] strip thickness scale factor (t = t_b * t_s)
+    ro:     10000.00 # [kg/m**3] mass density, convert to [kg/mm**3] before calc
+    c:          1.00 # [no unit] stress ratio
+    E_x:    17635.42 # [N/mm**2] elastic modulus
+    E_y:     8032.99 # [N/mm**2] elastic modulus
+    mu_x:       0.39 # [no unit] Poisson's ratio
+    mu_y:       0.18 # [no unit] Poisson's ratio
+    G_xy:    3156.91 # [N/mm**2] shear modulus
