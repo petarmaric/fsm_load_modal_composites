@@ -1,0 +1,12 @@
+fsm_load_modal_composites 1.0.1 (August 30, 2019)
+=================================================
+
+Bugfixes
+--------
+
+    * Migrated from Bitbucket (Mercurial) to GitHub (Git).
+
+fsm_load_modal_composites 1.0.0 (February 6, 2018)
+==================================================
+
+    * Initial release.

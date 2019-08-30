@@ -6,7 +6,7 @@ import tables as tb
 import yaml
 
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 
 def load_modal_composites(results_file, **filters):
