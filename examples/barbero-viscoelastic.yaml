@@ -5,7 +5,7 @@ search_space: # start, stop, step
 
 
 geometry:
-  beam_type_id: 1 # See https://bitbucket.org/petar/beam_integrals for full list
+  beam_type_id: 1 # See https://github.com/petarmaric/beam_integrals for full list
 
   nodal_lines: # [mm] x, z coordinates
     1:  [  0.000,    0.000]
